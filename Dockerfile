@@ -9,8 +9,11 @@ WORKDIR /app
 # Copiar archivos del proyecto
 COPY . .
 
-# Exponer puerto
-EXPOSE 8080
+# Railway usa la variable $PORT
+ENV PORT=8080
 
-# Servir desde la carpeta public
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "public/"]
+# Exponer puerto
+EXPOSE $PORT
+
+# Servir desde la carpeta public usando el puerto dinámico
+CMD php -S 0.0.0.0:${PORT} -t public/
