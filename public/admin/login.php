@@ -3,7 +3,7 @@ require_once __DIR__ . '/../../includes/bootstrap.php';
 require_once __DIR__ . '/../../includes/admin_auth.php';
 
 if (current_admin()) {
-    redirect('/sistema_hospital/public/admin/index.php');
+    redirect('/admin/index.php');
 }
 
 $error = '';
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif (!admin_login($email, $password)) {
             $error = 'Credenciales incorrectas.';
         } else {
-            redirect('/sistema_hospital/public/admin/index.php');
+            redirect('/admin/index.php');
         }
     }
 }

@@ -35,6 +35,6 @@ function current_admin(): ?array
 function require_admin(): void
 {
     if (!current_admin()) {
-        redirect('/sistema_hospital/public/admin/login.php');
+        redirect('/admin/login.php');
     }
 }

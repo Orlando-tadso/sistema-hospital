@@ -1,9 +1,9 @@
 <?php
 // Script de inicialización de base de datos para Railway
 // Ejecutar una sola vez: https://tu-dominio.up.railway.app/setup_database.php
+// NOTA: Este script NO requiere autenticación
 
-require_once __DIR__ . '/../includes/config.php';
-
+// NO incluir bootstrap.php para evitar redirecciones de autenticación
 $config = require __DIR__ . '/../includes/config.php';
 
 try {

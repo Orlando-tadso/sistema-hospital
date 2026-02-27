@@ -13,13 +13,13 @@ $admin = current_admin();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo h($pageTitle); ?></title>
-    <link rel="stylesheet" href="/sistema_hospital/public/assets/style.css">
+    <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-content">
             <div class="brand">
-                <img class="logo" src="/sistema_hospital/public/assets/logo.jpg" alt="Hospital San Nicolas de Tolentino">
+                <img class="logo" src="/assets/logo.jpg" alt="Hospital San Nicolas de Tolentino">
                 <div>
                     <p class="eyebrow">Hospital San Nicolas de Tolentino</p>
                     <h1 style="margin: 0.25rem 0 0;">Panel Administrativo</h1>

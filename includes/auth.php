@@ -38,6 +38,6 @@ function current_user(): ?array
 function require_login(): void
 {
     if (!current_user()) {
-        redirect('/sistema_hospital/public/login.php');
+        redirect('/login.php');
     }
 }
