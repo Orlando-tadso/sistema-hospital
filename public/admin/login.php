@@ -65,7 +65,7 @@ include __DIR__ . '/../../includes/admin_header.php';
                 <span class="muted">Use claves seguras. Cambie la clave regularmente.</span>
             </li>
         </ul>
-        <a class="button ghost" href="/sistema_hospital/public/admin/setup_admin.php" style="margin-top: 1.5rem;">Configurar administrador</a>
+        <a class="button ghost" href="/admin/setup_admin.php" style="margin-top: 1.5rem;">Configurar administrador</a>
     </div>
 </section>
 <?php include __DIR__ . '/../../includes/admin_footer.php'; ?>

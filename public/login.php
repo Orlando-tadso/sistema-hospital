@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../includes/bootstrap.php';
 
 if (current_user()) {
-    redirect('/sistema_hospital/public/dashboard.php');
+    redirect('/dashboard.php');
 }
 
 $error = '';
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif (!login($email, $password)) {
             $error = 'Credenciales incorrectas. Verifique su correo y clave.';
         } else {
-            redirect('/sistema_hospital/public/dashboard.php');
+            redirect('/dashboard.php');
         }
     }
 }
@@ -63,8 +63,8 @@ include __DIR__ . '/../includes/header.php';
                 <span class="muted">Recordatorios personalizados de su tratamiento.</span>
             </li>
         </ul>
-        <a class="button ghost" href="/sistema_hospital/public/setup.php" style="margin-top: 1.5rem;">Crear cuenta demo</a>
-        <a class="button ghost" href="/sistema_hospital/public/admin/login.php" style="margin-top: 0.75rem;">Acceso administrativo</a>
+        <a class="button ghost" href="/setup.php" style="margin-top: 1.5rem;">Crear cuenta demo</a>
+        <a class="button ghost" href="/admin/login.php" style="margin-top: 0.75rem;">Acceso administrativo</a>
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

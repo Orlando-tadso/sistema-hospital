@@ -25,18 +25,18 @@ $activePage = $activePage ?? '';
             <?php if ($user): ?>
                 <div class="user-meta">
                     <span><?php echo h($user['full_name']); ?></span>
-                    <a class="button ghost" href="/sistema_hospital/public/logout.php">Salir</a>
+                    <a class="button ghost" href="/logout.php">Salir</a>
                 </div>
             <?php endif; ?>
         </div>
         <?php if ($user): ?>
         <nav class="site-nav">
             <div class="container">
-                <a class="<?php echo $activePage === 'dashboard' ? 'active' : ''; ?>" href="/sistema_hospital/public/dashboard.php">Resumen</a>
-                <a class="<?php echo $activePage === 'appointments' ? 'active' : ''; ?>" href="/sistema_hospital/public/appointments.php">Citas</a>
-                <a class="<?php echo $activePage === 'results' ? 'active' : ''; ?>" href="/sistema_hospital/public/results.php">Resultados</a>
-                <a class="<?php echo $activePage === 'history' ? 'active' : ''; ?>" href="/sistema_hospital/public/history.php">Historial</a>
-                <a class="<?php echo $activePage === 'medications' ? 'active' : ''; ?>" href="/sistema_hospital/public/medications.php">Medicamentos</a>
+                <a class="<?php echo $activePage === 'dashboard' ? 'active' : ''; ?>" href="/dashboard.php">Resumen</a>
+                <a class="<?php echo $activePage === 'appointments' ? 'active' : ''; ?>" href="/appointments.php">Citas</a>
+                <a class="<?php echo $activePage === 'results' ? 'active' : ''; ?>" href="/results.php">Resultados</a>
+                <a class="<?php echo $activePage === 'history' ? 'active' : ''; ?>" href="/history.php">Historial</a>
+                <a class="<?php echo $activePage === 'medications' ? 'active' : ''; ?>" href="/medications.php">Medicamentos</a>
             </div>
         </nav>
         <?php endif; ?>

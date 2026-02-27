@@ -28,19 +28,19 @@ $admin = current_admin();
             <?php if ($admin): ?>
                 <div class="user-meta">
                     <span><?php echo h($admin['full_name']); ?></span>
-                    <a class="button ghost" href="/sistema_hospital/public/admin/logout.php">Salir</a>
+                    <a class="button ghost" href="/admin/logout.php">Salir</a>
                 </div>
             <?php endif; ?>
         </div>
         <?php if ($showAdminNav && $admin): ?>
         <nav class="site-nav">
             <div class="container">
-                <a class="<?php echo $activePage === 'admin-dashboard' ? 'active' : ''; ?>" href="/sistema_hospital/public/admin/index.php">Resumen</a>
-                <a class="<?php echo $activePage === 'admin-patients' ? 'active' : ''; ?>" href="/sistema_hospital/public/admin/patients.php">Pacientes</a>
-                <a class="<?php echo $activePage === 'admin-appointments' ? 'active' : ''; ?>" href="/sistema_hospital/public/admin/appointments.php">Citas</a>
-                <a class="<?php echo $activePage === 'admin-results' ? 'active' : ''; ?>" href="/sistema_hospital/public/admin/results.php">Resultados</a>
-                <a class="<?php echo $activePage === 'admin-history' ? 'active' : ''; ?>" href="/sistema_hospital/public/admin/history.php">Historial</a>
-                <a class="<?php echo $activePage === 'admin-medications' ? 'active' : ''; ?>" href="/sistema_hospital/public/admin/medications.php">Medicamentos</a>
+                <a class="<?php echo $activePage === 'admin-dashboard' ? 'active' : ''; ?>" href="/admin/index.php">Resumen</a>
+                <a class="<?php echo $activePage === 'admin-patients' ? 'active' : ''; ?>" href="/admin/patients.php">Pacientes</a>
+                <a class="<?php echo $activePage === 'admin-appointments' ? 'active' : ''; ?>" href="/admin/appointments.php">Citas</a>
+                <a class="<?php echo $activePage === 'admin-results' ? 'active' : ''; ?>" href="/admin/results.php">Resultados</a>
+                <a class="<?php echo $activePage === 'admin-history' ? 'active' : ''; ?>" href="/admin/history.php">Historial</a>
+                <a class="<?php echo $activePage === 'admin-medications' ? 'active' : ''; ?>" href="/admin/medications.php">Medicamentos</a>
             </div>
         </nav>
         <?php endif; ?>
