@@ -48,6 +48,19 @@ function verify_csrf(): bool
         return true;
     }
 
-    $token = $_POST['csrf_token'] ?? '';
-    return hash_equals($_SESSION['csrf_token'] ?? '', $token);
+    $sessionToken = $_SESSION['csrf_token'] ?? '';
+    $postToken = $_POST['csrf_token'] ?? '';
+
+    if ($sessionToken === '' || $postToken === '') {
+        return false;
+    }
+
+    $valid = hash_equals($sessionToken, $postToken);
+
+    // Regenerar token después de cada verificación exitosa
+    if ($valid) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(16));
+    }
+
+    return $valid;
 }
