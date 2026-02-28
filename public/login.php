@@ -1,5 +1,10 @@
 <?php
 require_once __DIR__ . '/../includes/bootstrap.php';
+require_once __DIR__ . '/../includes/admin_auth.php';
+
+if (current_admin()) {
+    redirect('/admin/index.php');
+}
 
 if (current_user()) {
     redirect('/dashboard.php');
@@ -16,6 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (!$email || !$password) {
             $error = 'Complete todos los campos.';
+        } elseif (admin_login($email, $password)) {
+            // Si es admin, redirigir al panel administrativo
+            redirect('/admin/index.php');
         } elseif (!login($email, $password)) {
             $error = 'Credenciales incorrectas. Verifique su correo y clave.';
         } else {
