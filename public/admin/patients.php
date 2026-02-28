@@ -98,7 +98,6 @@ include __DIR__ . '/../../includes/admin_header.php';
                 <th>Correo</th>
                 <th>Fecha nacimiento</th>
                 <th>Telefono</th>
-                <th>Registro</th>
             </tr>
         </thead>
         <tbody>
@@ -109,12 +108,11 @@ include __DIR__ . '/../../includes/admin_header.php';
                         <td><?php echo h($patient['email']); ?></td>
                         <td><?php echo h(format_date($patient['dob'])); ?></td>
                         <td><?php echo h($patient['phone']); ?></td>
-                        <td><?php echo h(format_datetime($patient['created_at'])); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="5" class="muted">No hay pacientes registrados.</td>
+                    <td colspan="4" class="muted">No hay pacientes registrados.</td>
                 </tr>
             <?php endif; ?>
         </tbody>
